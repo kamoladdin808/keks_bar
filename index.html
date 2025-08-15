@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEKS COFFEE BAR | Премиум кофейный опыт</title>
+  <meta name="description"
+    content="KEKS COFFEE BAR — премиум кофейный бар в Ургенче. Авторские напитки, уютная атмосфера, свежая выпечка.">
+  <meta name="theme-color" content="#1A120B">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:title" content="KEKS COFFEE BAR">
+  <meta property="og:description" content="Премиум кофейный опыт в Ургенче. Авторские напитки и уютная атмосфера.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.instagram.com/keks.urgench/">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=KEKS+COFFEE+BAR">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark: #1A120B;
+      --primary-light: #F5F0E6;
+      --accent-gold: #D4AF37;
+      --accent-copper: #B87333;
+      --text-dark: #1A120B;
+      --text-light: #FAFAFA;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --section-padding: 8rem 2rem;
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      overflow-x: hidden;
+      width: 100vw;
+      max-width: 100vw;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      transition: var(--transition);
+      background-color: rgba(26, 18, 11, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    header.scrolled {
+      padding: 1rem 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      background-color: rgba(26, 18, 11, 0.98);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+
+    .logo-img {
+      height: 50px;
+      margin-right: 1rem;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text span:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 2.5rem;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .lang-switcher {
+      margin-right: 2rem;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+      margin-left: 0.5rem;
+      padding: 0.3rem;
+      font-size: 0.8rem;
+      transition: var(--transition);
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+
+    .lang-btn.active {
+      opacity: 1;
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-left: 2rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      color: white;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      margin-bottom: 40px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-gold);
+      color: var(--text-dark);
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--accent-gold);
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: var(--accent-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animation for coffee beans */
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.3;
+      }
+
+      90% {
+        opacity: 0.3;
+      }
+
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* About Section */
+    .about {
+      padding: var(--section-padding);
+      background-color: var(--primary-light);
+      position: relative;
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+      height: 600px;
+    }
+
+    .about-img-main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-img-secondary {
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      border: 10px solid var(--primary-light);
+    }
+
+    .about-content {
+      position: relative;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: var(--accent-gold);
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.8;
+      max-width: 700px;
+    }
+
+    .about-features {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+      margin-right: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    .feature-content h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Menu Section */
+    .menu-section {
+      padding: var(--section-padding);
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.08) 0%, rgba(245, 240, 230, 0.12) 100%);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+      border-radius: 24px;
+      padding: 2.5rem 2rem 2rem 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .menu-header .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    .menu-header .section-title:after {
+      content: '';
+      display: block;
+      margin: 0.8rem auto 0 auto;
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-copper) 100%);
+      opacity: 0.7;
+    }
+
+    .menu-header p {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: #fff;
+      opacity: 0.92;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      margin-bottom: 0;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.10);
+    }
+
+    .menu-categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      gap: 1rem;
+    }
+
+    .category-btn {
+      background: none;
+      border: 1px solid var(--accent-gold);
+      color: var(--text-light);
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    .category-btn.active,
+    .category-btn:hover {
+      background-color: var(--accent-gold);
+      color: var(--text-dark);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background-color: var(--primary-light);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--accent-gold);
+      color: var(--text-dark);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    .menu-card-image {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .menu-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .menu-card:hover .menu-card-image img {
+      transform: scale(1.1);
+    }
+
+    .menu-card-content {
+      padding: 1.5rem;
+    }
+
+    .menu-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .menu-card-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-card-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+
+    .menu-card-price {
+      font-weight: bold;
+      color: var(--accent-gold);
+      font-size: 1.2rem;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    .menu-card-description {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-card-sizes {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .size-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+      cursor: default;
+    }
+
+    .size-btn.active {
+      background-color: var(--accent-gold);
+      color: var(--text-dark);
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: var(--section-padding);
+      background-color: var(--primary-light);
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .gallery-header .section-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+      aspect-ratio: 1/1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-caption {
+      color: white;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    /* Instagram Section */
+    .instagram {
+      padding: var(--section-padding);
+      background-color: var(--primary-light);
+    }
+
+    .instagram-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .insta-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      aspect-ratio: 1/1;
+    }
+
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .insta-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Contacts Section */
+    .contacts {
+      padding: var(--section-padding);
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+    }
+
+    .contacts-container {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      align-items: stretch;
+    }
+
+    .contacts-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .contact-icon {
+      font-size: 1.2rem;
+      color: var(--accent-gold);
+      margin-right: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    .contact-text {
+      flex: 1;
+    }
+
+    .contact-text h4 {
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--accent-gold);
+      color: var(--text-dark);
+      transform: translateY(-3px);
+    }
+
+    .map-container {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+      flex: 1 1 50%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      flex: 1 1 auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0F0905;
+      color: var(--text-light);
+      padding: 3rem 0 2rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      margin: 0 auto 2rem auto;
+      width: 100%;
+      max-width: 800px;
+      padding: 2.5rem 2rem 1.5rem 2rem;
+      box-sizing: border-box;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.10) 0%, rgba(245, 240, 230, 0.13) 100%);
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+      position: relative;
+    }
+
+    .footer-col {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    }
+
+    .footer-col h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 1.1rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    .footer-col h3:after {
+      content: '';
+      display: block;
+      margin: 0.7rem auto 0 auto;
+      width: 50px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-copper) 100%);
+      opacity: 0.7;
+    }
+
+    .footer-col p {
+      color: #fff;
+      opacity: 0.92;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.10);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.2rem;
+      font-size: 1rem;
+      opacity: 0.85;
+      color: rgba(245, 240, 230, 0.85);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+    }
+
+    .footer-bottom a.made-link {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 0.5em;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a.made-link:hover {
+      color: var(--accent-copper);
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 500px;
+        margin-bottom: 5rem;
+      }
+
+      .contacts-container {
+        flex-direction: column;
+      }
+
+      .map-container {
+        height: 400px;
+        margin-top: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-padding: 6rem 1.5rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 90px;
+        left: -100vw;
+        width: 100vw;
+        height: calc(100vh - 90px);
+        background-color: var(--primary-dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        padding: 2rem;
+        z-index: 1000;
+      }
+
+      nav ul.active {
+        left: 0;
+      }
+
+      nav ul li {
+        margin: 1rem 0;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      :root {
+        --section-padding: 4rem 1rem;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-categories {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        scrollbar-width: none;
+      }
+
+      .menu-categories::-webkit-scrollbar {
+        display: none;
+      }
+
+      .category-btn {
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text span:first-child {
+        font-size: 1.5rem;
+      }
+
+      .logo-text span:last-child {
+        font-size: 0.7rem;
+      }
+
+      .header-actions {
+        margin-left: auto;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <div class="logo-text">
+          <span>KEKS</span>
+          <span>Coffee Bar</span>
+        </div>
+      </a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">Ru</button>
+          <button class="lang-btn" data-lang="en">En</button>
+          <button class="lang-btn" data-lang="uz">Uz</button>
+        </div>
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>KEKS COFFEE BAR</h1>
+      <p>Премиум кофейный опыт в сердце Ургенча</p>
+      <a href="#menu" class="btn">Посмотреть меню</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-container">
+      <div class="about-image">
+        <img
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+          alt="KEKS Coffee Bar" class="about-img-main" loading="lazy">
+        <img
+          src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="KEKS Interior" class="about-img-secondary" loading="lazy">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">О нас</h2>
+        <p class="section-subtitle">KEKS COFFEE BAR — это место, где создается настоящий кофейный опыт. Мы
+          объединяем лучшие зерна, мастерство бариста и уютную атмосферу.</p>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-coffee"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Премиум зерно</h4>
+              <p>Используем только specialty кофе с оценкой 85+ баллов</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Профессионализм</h4>
+              <p>Наши бариста - победители национальных чемпионатов</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Экологичность</h4>
+              <p>100% биоразлагаемые стаканы и экопосуда</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Сообщество</h4>
+              <p>Пространство для творческих людей и кофейных гурманов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <h2>Наше меню</h2>
+        <p>Каждый напиток в нашем меню - это результат тщательного отбора ингредиентов и мастерства
+          приготовления</p>
+      </div>
+
+      <div class="menu-categories">
+        <button class="category-btn active" data-category="classic">Классический кофе</button>
+        <button class="category-btn" data-category="author">Авторский кофе</button>
+        <button class="category-btn" data-category="tea">Чайные коктейли</button>
+        <button class="category-btn" data-category="ice">Холодный кофе</button>
+        <button class="category-btn" data-category="lemonade">Лимонады</button>
+        <button class="category-btn" data-category="milkshake">Милкшейки</button>
+        <button class="category-btn" data-category="addons">Добавки</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Classic Coffee -->
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Эспрессо" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Эспрессо</h3>
+              <span class="menu-card-price">17k</span>
+            </div>
+            <p class="menu-card-subtitle">Espresso</p>
+            <p class="menu-card-description">Концентрированный напиток, приготовленный путем пропускания
+              горячей воды под давлением через тонко помолотый кофе.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Двойной эспрессо" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Двойной эспрессо</h3>
+              <span class="menu-card-price">20k</span>
+            </div>
+            <p class="menu-card-subtitle">Double Espresso</p>
+            <p class="menu-card-description">Две порции эспрессо в одной чашке для более насыщенного вкуса.
+            </p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Американо" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Американо</h3>
+              <span class="menu-card-price">17k/20k</span>
+            </div>
+            <p class="menu-card-subtitle">Americano</p>
+            <p class="menu-card-description">Эспрессо с добавлением горячей воды, менее концентрированный
+              чем классический эспрессо.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">L</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1568649929103-28ffbefaca1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Каппучино" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Каппучино</h3>
+              <span class="menu-card-price">20k/24k/28k</span>
+            </div>
+            <p class="menu-card-subtitle">Cappuccino</p>
+            <p class="menu-card-description">Кофейный напиток итальянской кухни на основе эспрессо с
+              добавлением молока и молочной пены.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+                <span class="size-btn">L</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1568649929103-28ffbefaca1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Латте" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Латте</h3>
+              <span class="menu-card-price">22k/26k/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Latte</p>
+            <p class="menu-card-description">Кофейный напиток, состоящий из молока и эспрессо, с небольшим
+              количеством молочной пены.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+                <span class="size-btn">L</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Раф" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Раф</h3>
+              <span class="menu-card-price">34k</span>
+            </div>
+            <p class="menu-card-subtitle">Raf</p>
+            <p class="menu-card-description">Кофейный напиток на основе эспрессо, взбитый с ванильным
+              сахаром и сливками.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Флэт уайт" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Флэт уайт</h3>
+              <span class="menu-card-price">24k</span>
+            </div>
+            <p class="menu-card-subtitle">Flat White</p>
+            <p class="menu-card-description">Кофейный напиток на основе двойного эспрессо с добавлением
+              подогретого молока и тонким слоем молочной пены.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Маккиато" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Маккиато</h3>
+              <span class="menu-card-price">24k</span>
+            </div>
+            <p class="menu-card-subtitle">Macchiato</p>
+            <p class="menu-card-description">Эспрессо с небольшим количеством молочной пены.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Какао" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Какао</h3>
+              <span class="menu-card-price">24k</span>
+            </div>
+            <p class="menu-card-subtitle">Cacao</p>
+            <p class="menu-card-description">Традиционный горячий шоколадный напиток.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author's Coffee -->
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Раф с халвой" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Раф с халвой</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Halva Raf</p>
+            <p class="menu-card-description">Авторская версия рафа с добавлением натуральной халвы,
+              ванильного сиропа и взбитых сливок.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Раф цитрусовый" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Раф цитрусовый</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Citrus Raf</p>
+            <p class="menu-card-description">Освежающая версия рафа с цитрусовыми нотами.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Раф лавандовый" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Раф лавандовый</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Lavender Raf</p>
+            <p class="menu-card-description">Нежный раф с ароматом лаванды.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Раф попкорн" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Раф попкорн</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Popcorn Raf</p>
+            <p class="menu-card-description">Уникальный раф с карамельным вкусом попкорна.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1517701604591-5d0a8a5c0a8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Латте Баунти" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Латте Баунти</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Latte Bounty</p>
+            <p class="menu-card-description">Нежный латте с кокосовым сиропом, шоколадной крошкой и взбитыми
+              сливками.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1517701604591-5d0a8a5c0a8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Латте Пряная роза" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Латте Пряная роза</h3>
+              <span class="menu-card-price">37/42k</span>
+            </div>
+            <p class="menu-card-subtitle">Latte Spiced Rose</p>
+            <p class="menu-card-description">Латте с нежным ароматом розы и пряностей.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Какао Орео" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Какао Орео</h3>
+              <span class="menu-card-price">37k</span>
+            </div>
+            <p class="menu-card-subtitle">Cacao Oreo</p>
+            <p class="menu-card-description">Какао с печеньем Орео и взбитыми сливками.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tea Cocktails -->
+        <div class="menu-card" data-category="tea">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Тропический вайб" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Тропический вайб</h3>
+              <span class="menu-card-price">35k</span>
+            </div>
+            <p class="menu-card-subtitle">Tropical Vibe</p>
+            <p class="menu-card-description">Черный чай с манго, маракуйей и ананасом, подается со льдом и
+              мятой.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="tea">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Всё в одном" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Всё в одном</h3>
+              <span class="menu-card-price">35k</span>
+            </div>
+            <p class="menu-card-subtitle">All in</p>
+            <p class="menu-card-description">Фирменный чайный коктейль с сочетанием тропических фруктов.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="tea">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Киви-алоэ" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Киви-алоэ</h3>
+              <span class="menu-card-price">35k</span>
+            </div>
+            <p class="menu-card-subtitle">Kiwi-Aloe</p>
+            <p class="menu-card-description">Освежающий чайный коктейль с киви и экстрактом алоэ.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="tea">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Сладкий персик" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Сладкий персик</h3>
+              <span class="menu-card-price">35k</span>
+            </div>
+            <p class="menu-card-subtitle">Sweet Peach</p>
+            <p class="menu-card-description">Чайный коктейль с персиком и ванилью.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author's Tea -->
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Мандариновый чай" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Мандариновый чай</h3>
+              <span class="menu-card-price">25/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Tangerine tea</p>
+            <p class="menu-card-description">Ароматный чай с мандарином и специями.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Имбирный лимон" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Имбирный лимон</h3>
+              <span class="menu-card-price">25/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Ginger lemon</p>
+            <p class="menu-card-description">Тонизирующий чай с имбирем и лимоном.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Яблочный чай" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Яблочный чай</h3>
+              <span class="menu-card-price">25/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Apple tea</p>
+            <p class="menu-card-description">Ароматный чай с яблоком и корицей.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Смородина-Апельсин" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Смородина-Апельсин</h3>
+              <span class="menu-card-price">25/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Blackcurrant-Orange</p>
+            <p class="menu-card-description">Фруктовый чай с черной смородиной и апельсином.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Облепиха-Розмарин" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Облепиха-Розмарин</h3>
+              <span class="menu-card-price">25/30k</span>
+            </div>
+            <p class="menu-card-subtitle">Sea buckthorn-Rosemary</p>
+            <p class="menu-card-description">Тонизирующий чай с облепихой и розмарином.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Зелёный чай" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Зелёный чай</h3>
+              <span class="menu-card-price">12/15k</span>
+            </div>
+            <p class="menu-card-subtitle">Green tea</p>
+            <p class="menu-card-description">Традиционный зеленый чай высшего сорта.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Черный чай" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Черный чай</h3>
+              <span class="menu-card-price">12/15k</span>
+            </div>
+            <p class="menu-card-subtitle">Black tea</p>
+            <p class="menu-card-description">Классический черный чай.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="author">
+          <div class="menu-card-badge">Авторский</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Чай Жасмин" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Чай Жасмин</h3>
+              <span class="menu-card-price">12/15k</span>
+            </div>
+            <p class="menu-card-subtitle">Jasmine</p>
+            <p class="menu-card-description">Зеленый чай с цветами жасмина.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">S</span>
+                <span class="size-btn">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ice Coffee -->
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс американо" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс американо</h3>
+              <span class="menu-card-price">22k</span>
+            </div>
+            <p class="menu-card-subtitle">Ice Americano</p>
+            <p class="menu-card-description">Американо, охлажденный со льдом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс каппучино" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс каппучино</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Ice Cappuccino</p>
+            <p class="menu-card-description">Каппучино, охлажденный со льдом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс латте классический" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс латте классический</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Classic Ice Latte</p>
+            <p class="menu-card-description">Освежающий холодный латте с двойной порцией эспрессо и
+              охлажденным молоком.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс латте шоколадный" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс латте шоколадный</h3>
+              <span class="menu-card-price">32k</span>
+            </div>
+            <p class="menu-card-subtitle">Chocolate Ice Latte</p>
+            <p class="menu-card-description">Холодный латте с шоколадным сиропом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс латте карамельный" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс латте карамельный</h3>
+              <span class="menu-card-price">32k</span>
+            </div>
+            <p class="menu-card-subtitle">Caramel Ice Latte</p>
+            <p class="menu-card-description">Холодный латте с карамельным сиропом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Фраппучино" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Фраппучино</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">Frappuccino</p>
+            <p class="menu-card-description">Холодный кофейный напиток со льдом, молоком и взбитыми
+              сливками.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="ice">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Айс раф" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Айс раф</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">Ice Raf</p>
+            <p class="menu-card-description">Холодная версия классического рафа.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lemonades -->
+        <div class="menu-card" data-category="lemonade">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Манго-маракуя" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Манго-маракуя</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Mango-Passionfruit</p>
+            <p class="menu-card-description">Освежающий лимонад с тропическими нотами манго и маракуйи, с
+              добавлением свежей мяты.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="lemonade">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Клубничный лимонад" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Клубничный лимонад</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Strawberry</p>
+            <p class="menu-card-description">Освежающий лимонад с клубникой и лаймом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="lemonade">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Киви лимонад" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Киви лимонад</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Kiwi</p>
+            <p class="menu-card-description">Освежающий лимонад с киви и мятой.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="lemonade">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Малиновый лимонад" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Малиновый лимонад</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Raspberry</p>
+            <p class="menu-card-description">Освежающий лимонад с малиной и лаймом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="lemonade">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Мохито" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Мохито</h3>
+              <span class="menu-card-price">30k</span>
+            </div>
+            <p class="menu-card-subtitle">Classic Mojito</p>
+            <p class="menu-card-description">Классический безалкогольный мохито с лаймом и мятой.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milkshakes -->
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Банановый милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Банановый милкшейк</h3>
+              <span class="menu-card-price">37k</span>
+            </div>
+            <p class="menu-card-subtitle">Banana</p>
+            <p class="menu-card-description">Нежный молочный коктейль с бананом и ванилью.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Шоколадный милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Шоколадный милкшейк</h3>
+              <span class="menu-card-price">37k</span>
+            </div>
+            <p class="menu-card-subtitle">Chocolate</p>
+            <p class="menu-card-description">Насыщенный шоколадный молочный коктейль.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Клубничный милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Клубничный милкшейк</h3>
+              <span class="menu-card-price">37k</span>
+            </div>
+            <p class="menu-card-subtitle">Strawberry</p>
+            <p class="menu-card-description">Нежный молочный коктейль со свежей клубникой.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-badge">Хит</div>
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Орео милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Орео милкшейк</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">Oreo</p>
+            <p class="menu-card-description">Нежный молочный коктейль с печеньем Орео, шоколадным сиропом и
+              взбитыми сливками.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Сникерс милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Сникерс милкшейк</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">Snickers</p>
+            <p class="menu-card-description">Молочный коктейль с арахисом, карамелью и шоколадом.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Милки Вэй милкшейк" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Милки Вэй милкшейк</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">Milky Way</p>
+            <p class="menu-card-description">Молочный коктейль с карамелью и нутеллой.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="milkshake">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="RJ's shake" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">RJ's shake</h3>
+              <span class="menu-card-price">40k</span>
+            </div>
+            <p class="menu-card-subtitle">RJ's shake</p>
+            <p class="menu-card-description">Фирменный молочный коктейль с особым сочетанием ингредиентов.
+            </p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Addons -->
+        <div class="menu-card" data-category="addons">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Сиропы" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Сиропы</h3>
+              <span class="menu-card-price">5k</span>
+            </div>
+            <p class="menu-card-subtitle">Syrup</p>
+            <p class="menu-card-description">Разнообразные сиропы для добавления в напитки: ванильный,
+              карамельный, шоколадный, кокосовый и другие.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="addons">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Мята" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Мята</h3>
+              <span class="menu-card-price">5k</span>
+            </div>
+            <p class="menu-card-subtitle">Mint</p>
+            <p class="menu-card-description">Свежая мята для добавления в напитки.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="addons">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Лимон" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Лимон</h3>
+              <span class="menu-card-price">5k</span>
+            </div>
+            <p class="menu-card-subtitle">Lemon</p>
+            <p class="menu-card-description">Свежий лимон для добавления в напитки.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="addons">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Мёд" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Мёд</h3>
+              <span class="menu-card-price">5k</span>
+            </div>
+            <p class="menu-card-subtitle">Honey</p>
+            <p class="menu-card-description">Натуральный мед для добавления в напитки.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="addons">
+          <div class="menu-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1579954115565-e72f5340b1ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Имбирь" loading="lazy">
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Имбирь</h3>
+              <span class="menu-card-price">5k</span>
+            </div>
+            <p class="menu-card-subtitle">Ginger</p>
+            <p class="menu-card-description">Свежий имбирь для добавления в напитки.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-sizes">
+                <span class="size-btn active">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Instagram Section -->
+  <section class="instagram" id="instagram"
+    style="padding: var(--section-padding); background-color: var(--primary-light);">
+    <div class="container">
+      <div class="instagram-header" style="text-align:center; margin-bottom: 2rem;">
+        <h2 class="section-title" style="margin-bottom: 0.5rem;">Мы в Instagram</h2>
+        <p class="section-subtitle" style="margin: 0 auto 1.5rem;">Подписывайтесь на
+          <strong>@keks.urgench</strong> — свежие новости, акции и атмосфера каждый день
+        </p>
+        <a class="btn" href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:.5rem;">
+          <i class="fab fa-instagram"></i>
+          Открыть Instagram
+        </a>
+      </div>
+
+      <div class="instagram-grid"
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="insta-item"
+          style="position:relative;overflow:hidden;border-radius: var(--border-radius);">
+          <img src="https://images.unsplash.com/photo-1515825838458-f2a94b20105a?q=80&w=1200&auto=format&fit=crop"
+            alt="KEKS Instagram 1" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+        </a>
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="insta-item"
+          style="position:relative;overflow:hidden;border-radius: var(--border-radius);">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+            alt="KEKS Instagram 2" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+        </a>
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="insta-item"
+          style="position:relative;overflow:hidden;border-radius: var(--border-radius);">
+          <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
+            alt="KEKS Instagram 3" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+        </a>
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="insta-item"
+          style="position:relative;overflow:hidden;border-radius: var(--border-radius);">
+          <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?q=80&w=1200&auto=format&fit=crop"
+            alt="KEKS Instagram 4" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+        </a>
+        <a href="https://www.instagram.com/keks.urgench/" target="_blank" rel="noopener" class="insta-item"
+          style="position:relative;overflow:hidden;border-radius: var(--border-radius);">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200&auto=format&fit=crop"
+            alt="KEKS Instagram 5" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform .4s ease;">
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contacts Section -->
+  <section class="contacts" id="contacts">
+    <div class="container contacts-container">
+      <div class="contacts-info">
+        <h2>Контакты</h2>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Адрес</h4>
+            <p>Улица Кофейная, 123, Ташкент, Узбекистан</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Телефон</h4>
+            <p>+998 90 123 45 67</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Email</h4>
+            <p>info@kekscoffee.uz</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Часы работы</h4>
+            <p>Пн-Пт: 8:00 - 22:00<br>Сб-Вс: 9:00 - 23:00</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/keks.urgench/" class="social-link" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.622824880525!2d60.640891775887695!3d41.555763171278926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfcf00776767bb%3A0x5f3de6e2a19dc2e3!2sCOFFEEBAR%20KEKS!5e0!3m2!1sru!2s!4v1755179319542!5m2!1sru!2s"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>KEKS COFFEE BAR</h3>
+        <p>Премиум кофейный опыт в сердце Ургенча. Мы создаем не просто кофе, а искусство в каждой чашке.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        <span style="font-size:1.08em; letter-spacing:0.01em;">&copy; 2025 KEKS COFFEE BAR. Все права
+          защищены.</span>
+        <span style="margin:0 12px; color:#d4af37; font-size:1.2em; vertical-align:middle;">|</span>
+        <span style="font-size:1.08em;">Сделано
+          <a href="https://www.instagram.com/kokojambo_808/" class="made-link" target="_blank" rel="noopener noreferrer"
+            title="Instagram Камоладдина" aria-label="Instagram Камоладдина">
+            <i class="fab fa-instagram" style="margin-right:4px;"></i>Камоладдином
+          </a>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('active');
+          menuToggle.innerHTML = navMenu.classList.contains('active') ?
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu when clicking on links
+        document.querySelectorAll('#nav-menu a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navMenu.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          });
+        });
+      }
+
+      // Header scroll effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Menu filtering
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const menuCards = document.querySelectorAll('.menu-card');
+
+      categoryBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          // Remove active class from all buttons
+          categoryBtns.forEach(function (b) {
+            b.classList.remove('active');
+          });
+
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          const category = this.dataset.category;
+
+          // Filter menu cards
+          menuCards.forEach(function (card) {
+            if (category === 'all' || card.dataset.category === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+
+      // Language switcher
+      const langBtns = document.querySelectorAll('.lang-btn');
+      langBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          langBtns.forEach(function (b) {
+            b.classList.remove('active');
+          });
+          this.classList.add('active');
+          // Here you would add language switching logic
+        });
+      });
+
+      // Lazy loading for images
+      if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src || img.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          });
+        });
+
+        lazyImages.forEach(img => {
+          if (img.dataset.src) {
+            imageObserver.observe(img);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
